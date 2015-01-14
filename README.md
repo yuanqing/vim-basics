@@ -12,17 +12,17 @@ A barebones workflow is as follows:
   $ vim Main.java
   ```
 
-  You are now in Vim&rsquo;s **Normal** mode.
+  You are now in Vim&rsquo;s **Command** mode.
 
 2. To start typing into the file, you need to switch to Vim&rsquo;s **Insert** mode. Press `i` to do so. Now, whatever you type will appear as just you would expect in a text editor.
 
-3. As soon as you are done typing, press `<Esc>` to switch back to **Normal** mode. (The `<Esc>` key is your friend; hitting `<Esc>` will always bring you back to **Normal** mode.)
+3. As soon as you are done typing, press `<Esc>` to switch back to **Command** mode. (The `<Esc>` key is your friend; hitting `<Esc>` will always bring you back to **Command** mode.)
 
 3. And, well, that&rsquo;s it, really! Type `:w` to save the file, and `:q!` to quit Vim.
 
 ## Commands
 
-Virtually all operations in Vim happen in **Normal** mode. The key commands you must know are:
+Virtually all operations in Vim happen in **Command** mode. The key commands you must know are:
 
 - `<Ctrl>` + `u` and `<Ctrl>` + `d` to page up and down the file (faster than using the <code>&uarr;</code> and <code>&darr;</code> arrow keys)
 - `W` and `b` to move the cursor across words (faster than using the <code>&larr;</code> and <code>&rarr;</code> arrow keys)
@@ -92,8 +92,8 @@ Action | Key
 :------|:----
 Auto-indent the file | `gg=G`
 Enable smart indenting | `:set smartindent`
-Insert spaces on pressing \<Tab\> | `:set expandtab`
-Set the number of spaces to insert on pressing \<Tab\> (eg. 2 spaces) | `:set tabstop=2`
+Insert spaces on pressing `<Tab>` | `:set expandtab`
+Set the number of spaces to insert on pressing `<Tab>` (eg. 2 spaces) | `:set tabstop=2`
 
 ### Display settings
 
