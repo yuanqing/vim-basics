@@ -24,8 +24,8 @@ A barebones workflow is as follows:
 
 Virtually all operations in Vim happen in **Normal** mode. The key commands you must know are:
 
-- `<Ctrl>` + `u` and `<Ctrl>` + `d` to quickly page up and down the file (faster than using the <code>&uarr;</code> and <code>&darr;</code> arrows)
-- `W` and `b` to quickly move the cursor across words (faster than using the <code>&larr;</code> and <code>&rarr;</code> arrows)
+- `<Ctrl>` + `u` and `<Ctrl>` + `d` to page up and down the file (faster than using the <code>&uarr;</code> and <code>&darr;</code> arrow keys)
+- `W` and `b` to move the cursor across words (faster than using the <code>&larr;</code> and <code>&rarr;</code> arrow keys)
 - `0` and `$` to move the cursor to the start and end of the current line
 - `yy` to copy the current line, and `p` to paste
 - `dd` to delete the current line
