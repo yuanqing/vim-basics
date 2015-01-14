@@ -14,7 +14,7 @@ A barebones workflow is as follows:
 
   You are now in Vim&rsquo;s **Command** mode.
 
-2. To start typing into the file, you need to switch to Vim&rsquo;s **Insert** mode. Press `i` to do so. Now, whatever you type will appear as just you would expect in a text editor.
+2. To start typing into the file, you need to switch to Vim&rsquo;s **Insert** mode. Press `i` to do so. Now, whatever you type will appear as you would expect in a text editor.
 
 3. As soon as you are done typing, press `<Esc>` to switch back to **Command** mode. (The `<Esc>` key is your friend; hitting `<Esc>` will always bring you back to **Command** mode.)
 
