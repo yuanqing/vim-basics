@@ -59,7 +59,7 @@ Delete the character under the cursor | `x`
 Action | Key
 :------|:----
 Copy the current line | `yy`
-Copy a particular number of lines, starting with the current line (eg. 3 lines) | `3yy`
+Copy a particular number of lines, starting from the current line (eg. 3 lines) | `3yy`
 Paste | `p`
 
 ### Undo/redo
@@ -104,7 +104,7 @@ Display line numbers | `:set number`
 
 ## Settings
 
-Various settings (eg. syntax highlighting) can be persisted by putting them in a file named `.vimrc` in your home directory.
+Various settings (eg. syntax highlighting) can be persisted by putting them in a file called `.vimrc` in your home directory.
 
 Your `~/.vimrc` might be as follows:
 
