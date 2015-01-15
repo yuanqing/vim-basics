@@ -6,7 +6,7 @@
 
 1. Launch Vim via the terminal:
 
-  ```bash
+  ```
   vim Main.java
   ```
 
@@ -92,6 +92,26 @@ Save the file | `:w` then `<Enter>`
 Save the file then quit | `:wq!` then `<Enter>`
 Quit without saving the file | `:q!` then `<Enter>`
 
+## The undo problem
+
+Remember that undo is simply `u`, *not* `Ctrl` + `z`!
+
+If you&rsquo;d accidentally pressed `Ctrl` + `z`, you will find yourself back in your terminal, where you will see something like:
+
+```bash
+[1]+  Stopped                 vim Main.java
+```
+
+A quick fix is to issue the `fg` command in the terminal:
+
+```
+fg
+```
+
+This will bring back your Vim session, and all is well with the world.
+
+(Explanation: Pressing `Ctrl` + `z` places the Vim process in the background. The `fg` command simply brings the Vim process back to the foreground.)
+
 ## Settings
 
 These are some commands to customise the display:
@@ -103,7 +123,7 @@ Enable line numbers | `:set number` then `<Enter>`
 
 Vim will look for a settings file named `.vimrc` in your home directory. You can avoid having to type the above settings for every new Vim session by putting the following in your `~/.vimrc`:
 
-```viml
+```
 syntax on
 set number
 ```
