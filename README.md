@@ -47,12 +47,14 @@ Move the cursor to the start of the current line | `0`
 Move the cursor to the end of the current line | `$`
 Move the cursor to a particular line (eg. line number 9) | `9G`
 
-### Delete
+### Delete/cut
 
 Action | Key
 :------|:----
 Delete the current line | `dd`
 Delete the character under the cursor | `x`
+
+Because the deleted characters are copied onto the paste buffer, effectively, these two commands behave like a &ldquo;cut&rdquo;.
 
 ### Copy and paste
 
@@ -62,7 +64,7 @@ Copy the current line | `yy`
 Copy a particular number of lines, starting from the current line (eg. 3 lines) | `3yy`
 Paste | `p`
 
-### Undo/redo
+### Undo and redo
 
 Action | Key
 :------|:----
