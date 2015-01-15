@@ -2,125 +2,112 @@
 
 > Just the basics to get you up and running with Vim.
 
-## Workflow
-
-A barebones workflow is as follows:
+## Quick start
 
 1. Launch Vim via the terminal:
 
   ```bash
-  $ vim Main.java
+  vim Main.java
   ```
 
-  You are now in Vim&rsquo;s ***Command*** mode (also known as ***Normal*** mode).
+  You are now in Vim&rsquo;s ***Command*** mode, also known as ***Normal*** mode.
 
-2. To start typing into the file, you need to switch to Vim&rsquo;s ***Insert*** mode. Press `i` to do so. Now, whatever you type will appear as you would expect in a text editor.
+  (You should see the contents of `Main.java` if the file already exists. Otherwise you will see an empty text editor window.)
 
-3. As soon as you are done typing, press `<Esc>` to switch back to *Command* mode. (The `<Esc>` key is your friend; hitting `<Esc>` will always bring you back to *Command* mode.)
+2. To start typing into the file, you need to switch to Vim&rsquo;s ***Insert*** mode. Press `i` to do so. You should see `-- INSERT --` at the bottom-left hand corner of the window. Now whatever you type will appear as you would expect with any other text editor.
 
-3. And, well, that&rsquo;s it, really! Type `:w` to save the file, and `:q!` to quit Vim.
+3. As soon as you&rsquo;re done typing, press `<Esc>` to go back to ***Command*** mode. (The `<Esc>` key is your friend! Hitting `<Esc>` will bring you back to ***Command*** mode.)
+
+4. And&hellip; that&rsquo;s about it, really! Now type `:w` and `<Enter>` to save the file, followed by `:q!` and `<Enter>` to quit Vim.
 
 ## Commands
 
-Virtually all operations in Vim happen in *Command* mode. The important commands you must know are:
+Virtually all operations in Vim occur while in ***Command*** mode. Listed here are the most crucial commands that you should/must know.
 
-- `<Ctrl>` + `u` and `<Ctrl>` + `d` to page up and down the file (faster than using the <code>&uarr;</code> and <code>&darr;</code> arrow keys)
-- `W` and `b` to move the cursor across words (faster than using the <code>&larr;</code> and <code>&rarr;</code> arrow keys)
-- `0` and `$` to move the cursor to the start and end of the current line
-- `yy` to copy the current line, and `p` to paste
-- `dd` to delete the current line
-- `u` to undo, and `<Ctrl>` + `r` to redo
-- `gg=G` to auto-indent the file
-- `:w` to save the file, `:wq!` to save and quit, and `:q!` to quit without saving
+### Switching between ***Command*** and ***Insert*** mode
 
-More commands are listed below.
+Action | Keys
+:------|:-----
+Switch to ***Command*** mode | `<Esc>`
+Switch to ***Insert*** mode | `i`
+Switch to ***Insert*** mode, moving the cursor to the end of the current line | `A`
+Switch to ***Insert*** mode, adding a new line under the current line, and moving the cursor to the new line | `o`
 
-### Moving around the file
+### Moving the cursor around the file
 
-Action | Key
-:------|:----
+Action | Keys
+:------|:-----
 Page up | `<Ctrl>` + `u`
 Page down | `<Ctrl>` + `d`
 Move the cursor to the next word | `W`
 Move the cursor to the previous word | `b`
 Move the cursor to the start of the current line | `0`
 Move the cursor to the end of the current line | `$`
-Move the cursor to a particular line (eg. line number 9) | `9G`
+Move the cursor to a particular line of the file (eg. line number 9) | `9G` or `:9`
+
+Of course, you can also move the cursor via any of the arrow keys, but it is a lot faster to use the above commands.
 
 ### Delete/cut
 
-Action | Key
-:------|:----
-Delete the current line | `dd`
+Action | Keys
+:------|:-----
+Delete the line under the cursor | `dd`
+Delete the word under the cursor | `dw`
 Delete the character under the cursor | `x`
 
-Because deleted characters are copied onto the clipboard, effectively these two commands behave like a cut.
+Because whatever you delete is copied into Vim&rsquo;s buffer, these 3 commands are akin to performing a cut.
 
 ### Copy and paste
 
-Action | Key
-:------|:----
+Action | Keys
+:------|:-----
 Copy the current line | `yy`
 Copy a particular number of lines, starting from the current line (eg. 3 lines) | `3yy`
 Paste | `p`
 
-To copy part of a line, or copy multiple lines:
+You can also copy via a text selection, which is more precise but a bit more involved:
 
-1. Press `v` to enter ***Visual*** mode.
-2. Use the arrow keys to adjust the text selection.
-3. When you have selected the text that you want to copy, press `y`. This will bring you back to *Command* mode, and the selected text will have been copied onto the clipboard.
+1. While in ***Command*** mode, press `v` to switch to ***Visual*** mode. You should see `-- VISUAL --` at the bottom-left hand corner of the window.
+2. [Move the cursor](#moving-the-cursor-around-the-file) to adjust the text selection.
+3. When you have selected the text that you want to copy, press `y`. This will bring you back to *Command* mode, and the selected text will have been copied into Vim&rsquo;s buffer.
 
 ### Undo and redo
 
-Action | Key
-:------|:----
+Action | Keys
+:------|:-----
 Undo | `u`
 Redo | `<Ctrl>` + `r`
 
+### Fixing code indentation
+
+Action | Keys
+:------|:-----
+Fix the code indentation of the file | `gg=G`
+
 ### Save and quit
 
-Action | Key
-:------|:----
-Save the file | `:w`
-Save the file then quit | `:wq!`
-Quit without saving the file | `:q!`
+Action | Keys
+:------|:-----
+Save the file | `:w` then `<Enter>`
+Save the file then quit | `:wq!` then `<Enter>`
+Quit without saving the file | `:q!` then `<Enter>`
 
-### Find and replace
+## Display settings
 
-Action | Key
-:------|:----
-Search the file for a keyword (eg. &ldquo;foo&rdquo;) | `/foo`
-Move to the next match | `n`
-Move to the previous match | `N`
-Replace all instances of a keyword (eg. replace &ldquo;foo&rdquo; with &ldquo;bar&rdquo;) | `%s/foo/bar/g`
+These are some commands to customise the display:
 
-### Text formatting
+Action | Keys
+:------|:-----
+Enable syntax highlighting | `:syntax on` then `<Enter>`
+Enable line numbers | `:set number` then `<Enter>`
 
-Action | Key
-:------|:----
-Auto-indent the file | `gg=G`
-Enable smart indenting | `:set smartindent`
-Insert spaces on pressing `<Tab>` | `:set expandtab`
-Set the number of spaces to insert on pressing `<Tab>` (eg. 2 spaces) | `:set tabstop=2`
-
-### Display settings
-
-Action | Key
-:------|:----
-Turn on syntax highlighting | `:syntax on`
-Display line numbers | `:set number`
-
-## Settings
-
-Various settings (eg. syntax highlighting) can be persisted by putting them in a file called `.vimrc` in your home directory.
-
-Your `~/.vimrc` might contain the following:
+Vim will look for a settings file called `.vimrc` in your home directory. You can avoid having to type the above settings again and again by simply putting the following in your `~/.vimrc`:
 
 ```viml
 syntax on
-
 set number
-set smartindent
-set expandtab
-set tabstop=2
 ```
+
+## Advanced stuff
+
+- [Vim commands cheatsheet](http://www.fprintf.net/vimCheatSheet.html)
