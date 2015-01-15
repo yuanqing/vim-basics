@@ -12,17 +12,17 @@ A barebones workflow is as follows:
   $ vim Main.java
   ```
 
-  You are now in Vim&rsquo;s **Command** mode (also known as **Normal** mode).
+  You are now in Vim&rsquo;s ***Command*** mode (also known as ***Normal*** mode).
 
-2. To start typing into the file, you need to switch to Vim&rsquo;s **Insert** mode. Press `i` to do so. Now, whatever you type will appear as you would expect in a text editor.
+2. To start typing into the file, you need to switch to Vim&rsquo;s ***Insert*** mode. Press `i` to do so. Now, whatever you type will appear as you would expect in a text editor.
 
-3. As soon as you are done typing, press `<Esc>` to switch back to **Command** mode. (The `<Esc>` key is your friend; hitting `<Esc>` will always bring you back to **Command** mode.)
+3. As soon as you are done typing, press `<Esc>` to switch back to *Command* mode. (The `<Esc>` key is your friend; hitting `<Esc>` will always bring you back to *Command* mode.)
 
 3. And, well, that&rsquo;s it, really! Type `:w` to save the file, and `:q!` to quit Vim.
 
 ## Commands
 
-Virtually all operations in Vim happen in **Command** mode. The key commands you must know are:
+Virtually all operations in Vim happen in *Command* mode. The important commands you must know are:
 
 - `<Ctrl>` + `u` and `<Ctrl>` + `d` to page up and down the file (faster than using the <code>&uarr;</code> and <code>&darr;</code> arrow keys)
 - `W` and `b` to move the cursor across words (faster than using the <code>&larr;</code> and <code>&rarr;</code> arrow keys)
@@ -54,7 +54,7 @@ Action | Key
 Delete the current line | `dd`
 Delete the character under the cursor | `x`
 
-Because the deleted characters are copied onto the paste buffer, effectively, these two commands behave like a &ldquo;cut&rdquo;.
+Because deleted characters are copied onto the clipboard, effectively these two commands behave like a cut.
 
 ### Copy and paste
 
@@ -63,6 +63,12 @@ Action | Key
 Copy the current line | `yy`
 Copy a particular number of lines, starting from the current line (eg. 3 lines) | `3yy`
 Paste | `p`
+
+To copy part of a line, or copy multiple lines:
+
+1. Press `v` to enter ***Visual*** mode.
+2. Use the arrow keys to adjust the text selection.
+3. When you have selected the text that you want to copy, press `y`. This will bring you back to *Command* mode, and the selected text will have been copied onto the clipboard.
 
 ### Undo and redo
 
@@ -108,7 +114,7 @@ Display line numbers | `:set number`
 
 Various settings (eg. syntax highlighting) can be persisted by putting them in a file called `.vimrc` in your home directory.
 
-Your `~/.vimrc` might be as follows:
+Your `~/.vimrc` might contain the following:
 
 ```viml
 syntax on
