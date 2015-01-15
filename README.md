@@ -12,7 +12,7 @@ A barebones workflow is as follows:
   $ vim Main.java
   ```
 
-  You are now in Vim&rsquo;s **Command** mode.
+  You are now in Vim&rsquo;s **Command** mode (also known as **Normal** mode).
 
 2. To start typing into the file, you need to switch to Vim&rsquo;s **Insert** mode. Press `i` to do so. Now, whatever you type will appear as you would expect in a text editor.
 
