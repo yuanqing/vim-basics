@@ -2,12 +2,18 @@
 
 > Just the basics to get you up and running with Vim.
 
+- [Quick start](#quick-start)
+- [Commands](#commands)
+- [Settings](#settings)
+- [The `<Ctrl>` + `z` &ldquo;problem&rdquo;](#the-ctrl--z-problem)
+- [See also](#see-also)
+
 ## Quick start
 
 1. Launch Vim via the terminal:
 
-  ```
-  vim Main.java
+  ```shell
+  $ vim Main.java
   ```
 
   You are now in Vim&rsquo;s ***Command*** mode, also known as ***Normal*** mode.
@@ -92,29 +98,9 @@ Save the file | `:w` then `<Enter>`
 Save the file then quit | `:wq!` then `<Enter>`
 Quit without saving the file | `:q!` then `<Enter>`
 
-## The undo problem
-
-Remember that undo is simply `u`, *not* `Ctrl` + `z`!
-
-If you&rsquo;d accidentally pressed `Ctrl` + `z`, you will find yourself back in your terminal, where you will see something like:
-
-```bash
-[1]+  Stopped                 vim Main.java
-```
-
-A quick fix is to issue the `fg` command in the terminal:
-
-```
-fg
-```
-
-This will bring back your Vim session, and all is well with the world.
-
-(Explanation: Pressing `Ctrl` + `z` places the Vim process in the background. The `fg` command simply brings the Vim process back to the foreground.)
-
 ## Settings
 
-These are some commands to customise the display:
+These are some of the commands to customise the display:
 
 Action | Keys
 :--|:--
@@ -123,11 +109,32 @@ Enable line numbers | `:set number` then `<Enter>`
 
 Vim will look for a settings file named `.vimrc` in your home directory. You can avoid having to type the above settings for every new Vim session by putting the following in your `~/.vimrc`:
 
-```
+```viml
 syntax on
 set number
 ```
 
-## Advanced stuff
+## The `<Ctrl>` + `z` &ldquo;problem&rdquo;
 
-- [Vim commands cheatsheet](http://www.fprintf.net/vimCheatSheet.html)
+Remember that the command for undo is simply `u`, *not* `Ctrl` + `z`!
+
+If you&rsquo;d accidentally pressed `Ctrl` + `z`, you will find yourself back in your terminal, where you will see something like the following:
+
+```shell
+[1]+  Stopped                 vim Main.java
+```
+
+A quick fix is to issue the `fg` command:
+
+```shell
+$ fg
+```
+
+This will bring us back to our Vim session, and all is well with the world.
+
+(Explanation: Pressing `<Ctrl>` + `z` places the currently-running program in the background. Here, the currently-running program is Vim. The `fg` program simply brings the most recent &ldquo;backgrounded&rdquo; program back to the foreground.)
+
+## See also
+
+- [Unix Basics](https://github.com/yuanqing/unix-basics)
+- [Vim Commands Cheatsheet](http://www.fprintf.net/vimCheatSheet.html)
