@@ -8,11 +8,13 @@
 - [The `<Ctrl>` + `z` &ldquo;problem&rdquo;](#the-ctrl--z-problem)
 - [See also](#see-also)
 
+This guide assumes some familiarity with the Unix terminal. (See [Unix Basics](https://github.com/yuanqing/unix-basics/blob/master/README.md) for a quick overview.)
+
 ## Quick start
 
 1. Launch Vim via the terminal:
 
-  ```shell
+  ```
   $ vim Main.java
   ```
 
@@ -20,7 +22,7 @@
 
   (You should see the contents of `Main.java` if the file already exists. Otherwise you will see an empty text editor window.)
 
-2. To start typing into the file, you need to switch to Vim&rsquo;s ***Insert*** mode. Press `i` to do so. You should see <code>--&nbsp;INSERT&nbsp;--</code> on the bottom-left hand corner of your window. Now you can type as you would with any other text editor.
+2. You cannot type into or edit your file while in ***Command*** mode. To start typing into the file, you must switch to Vim&rsquo;s ***Insert*** mode. Press `i` to do so. You should see <code>--&nbsp;INSERT&nbsp;--</code> on the bottom-left hand corner of your window. Now you can type as you would with any other text editor.
 
 3. When you&rsquo;re done typing, press `<Esc>` to go back to ***Command*** mode. (The `<Esc>` key is your friend! Hitting `<Esc>` will bring you back to ***Command*** mode.)
 
@@ -120,13 +122,13 @@ Remember that the command for undo is simply `u`, *not* `Ctrl` + `z`!
 
 If you&rsquo;d accidentally pressed `Ctrl` + `z`, you will find yourself back in your terminal, where you will see something like the following:
 
-```shell
+```
 [1]+  Stopped                 vim Main.java
 ```
 
 A quick fix is to issue the `fg` command:
 
-```shell
+```
 $ fg
 ```
 
@@ -136,5 +138,5 @@ This will bring us back to our Vim session, and all is well with the world.
 
 ## See also
 
-- [Unix Basics](https://github.com/yuanqing/unix-basics)
+- [Unix Basics](https://github.com/yuanqing/unix-basics/blob/master/README.md)
 - [Vim Commands Cheatsheet](http://www.fprintf.net/vimCheatSheet.html)
