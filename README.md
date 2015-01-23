@@ -134,7 +134,7 @@ $ fg
 
 This will bring us back to our Vim session, and all is well with the world.
 
-(Explanation: Pressing `<Ctrl>` + `z` places the currently-running program in the background. Here, the currently-running program is Vim. The `fg` program simply brings the most recent &ldquo;backgrounded&rdquo; program back to the foreground.)
+(Explanation: Pressing `<Ctrl>` + `z` [places the currently-running program in the background](http://en.wikibooks.org/wiki/A_Quick_Introduction_to_Unix/Job_Control#Controlling_Jobs_in_Unix). Here, the currently-running program is Vim. The `fg` program simply brings the most recent &ldquo;backgrounded&rdquo; program back to the foreground.)
 
 ## See also
 
