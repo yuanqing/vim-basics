@@ -8,17 +8,17 @@
 - [The `<Ctrl>` + `z` &ldquo;problem&rdquo;](#the-ctrl--z-problem)
 - [See also](#see-also)
 
-This guide assumes some familiarity with the Unix terminal. (See [Unix Basics](https://github.com/yuanqing/unix-basics/blob/master/README.md) for a quick overview.)
+This guide assumes some familiarity with the terminal. (See [Unix Basics](https://github.com/yuanqing/unix-basics/blob/master/README.md) for a quick overview.)
 
 ## Quick start
 
 1. Launch Vim via the terminal:
 
-  ```
+  ```sh
   $ vim Main.java
   ```
 
-  You are now in Vim&rsquo;s ***Command*** mode, also known as ***Normal*** mode.
+  You are now in Vim&rsquo;s ***Command*** mode mode.
 
   (You should see the contents of `Main.java` if the file already exists. Otherwise you will see an empty text editor window.)
 
@@ -30,7 +30,7 @@ This guide assumes some familiarity with the Unix terminal. (See [Unix Basics](h
 
 ## Commands
 
-Virtually all operations in Vim occur while in ***Command*** mode. Listed here are the more important commands that you should/must know.
+Virtually all operations in Vim occur while in ***Command*** mode. Listed here are the more important commands that you should know.
 
 ### Switching between ***Command*** and ***Insert*** mode
 
@@ -122,13 +122,13 @@ Remember that the command for undo is simply `u`, *not* `Ctrl` + `z`!
 
 If you&rsquo;d accidentally pressed `Ctrl` + `z`, you will find yourself back in your terminal, where you will see something like the following:
 
-```
+```sh
 [1]+  Stopped                 vim Main.java
 ```
 
 A quick fix is to issue the `fg` command:
 
-```
+```sh
 $ fg
 ```
 
