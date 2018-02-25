@@ -14,13 +14,13 @@ This guide assumes some familiarity with the terminal. (See [Unix Basics](https:
 
 1. Launch Vim via the terminal:
 
-  ```sh
-  $ vim Main.java
-  ```
+    ```sh
+    $ vim Main.java
+    ```
 
-  You are now in Vim&rsquo;s ***Command*** mode mode.
+    You are now in Vim&rsquo;s ***Command*** mode.
 
-  (You should see the contents of `Main.java` if the file already exists. Otherwise you will see an empty text editor window.)
+    (You should see the contents of `Main.java` if the file already exists. Otherwise you will see an empty text editor window.)
 
 2. You cannot type into or edit your file while in ***Command*** mode. To start typing into the file, you must switch to Vim&rsquo;s ***Insert*** mode. Press `i` to do so. You should see <code>--&nbsp;INSERT&nbsp;--</code> on the bottom-left hand corner of your window. Now you can type as you would with any other text editor.
 
