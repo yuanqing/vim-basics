@@ -26,7 +26,7 @@ This guide assumes some familiarity with the terminal. (See [Unix Basics](https:
 
 3. When you&rsquo;re done typing, press `<Esc>` to go back to ***Command*** mode. (The `<Esc>` key is your friend! Hitting `<Esc>` will bring you back to ***Command*** mode.)
 
-4. And&hellip; that&rsquo;s about it, really! Now type `:w` and `<Enter>` to save the file, followed by `:q!` and `<Enter>` to quit Vim.
+4. And&hellip; that&rsquo;s about it, really! Now type `:w` and `<Enter>` to save the file, followed by `:q` and `<Enter>` to quit Vim.
 
 ## Commands
 
@@ -97,7 +97,7 @@ Fix the code indentation of the file | `gg=G`
 Action | Keys
 :--|:--
 Save the file | `:w` then `<Enter>`
-Save the file then quit | `:wq!` then `<Enter>`
+Save the file then quit | `:wq` then `<Enter>`
 Quit without saving the file | `:q!` then `<Enter>`
 
 ## Settings
