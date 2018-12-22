@@ -30,7 +30,7 @@ This guide assumes some familiarity with the terminal. (See [Unix Basics](https:
 
 ## Commands
 
-Virtually all operations in Vim occur while in ***Command*** mode. Listed here are the more important commands that you should know.
+Almost all operations in Vim occur while in ***Command*** mode. Listed here are the more important commands that you should know.
 
 ### Switching between ***Command*** and ***Insert*** mode
 
@@ -63,7 +63,7 @@ Delete the line under the cursor | `dd`
 Delete the word under the cursor | `dw`
 Delete the character under the cursor | `x`
 
-Because whatever you delete is copied into Vim&rsquo;s buffer, these 3 commands are akin to performing a cut.
+Because whatever you delete is copied into Vim&rsquo;s clipboard, these 3 commands are akin to performing a cut.
 
 ### Copy and paste
 
@@ -77,7 +77,7 @@ You can also specify the text to be copied using a text selection. It is a bit m
 
 1. While in ***Command*** mode, press `v` to switch to ***Visual*** mode. You should see <code>--&nbsp;VISUAL&nbsp;--</code> on the bottom-left hand corner of your window.
 2. [Move the cursor](#moving-the-cursor-around-the-file) to adjust the text selection.
-3. When you have selected the text that you want to copy, press `y`. This will bring you back to ***Command*** mode, and the selected text will have been copied into Vim&rsquo;s buffer.
+3. When you have selected the text that you want to copy, press `y`. This will bring you back to ***Command*** mode, and the selected text will have been copied into Vim&rsquo;s clipboard.
 
 ### Undo and redo
 
@@ -132,7 +132,7 @@ A quick fix is to issue the `fg` command:
 $ fg
 ```
 
-This will bring us back to our Vim session, and all is well with the world.
+This will bring us back to Vim, and all is well with the world.
 
 (Explanation: Pressing `<Ctrl>` + `z` [places the currently-running program in the background](http://en.wikibooks.org/wiki/A_Quick_Introduction_to_Unix/Job_Control#Controlling_Jobs_in_Unix). Here, the currently-running program is Vim. The `fg` program simply brings the most recent &ldquo;backgrounded&rdquo; program back to the foreground.)
 
