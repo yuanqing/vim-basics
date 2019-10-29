@@ -100,6 +100,20 @@ Save the file | `:w` then `<Enter>`
 Save the file then quit | `:wq` then `<Enter>`
 Quit without saving the file | `:q!` then `<Enter>`
 
+### Create new window
+
+It's a good idea split windows in your text editor to visualize and make changes that depends on each other. For example, you need use a class selector in css of a html tag with specific class. So, you can do it with:
+
+Action | Keys
+------ | ---- 
+Split Up/Down | `:sp <filename>`
+Split Left/Right | `:vsp <filename>`
+Move between windows | `<Ctrl>` + `w` + `h/j/k/l`
+Grow window | `<Ctrl>` + `w` + `-`
+Shrink window | `<Ctrl>` + `w` + `+`
+
+Remember that `h`, `j`, `k` and `l` move cursor to left, down, up and right respectively.
+
 ## Settings
 
 These are some of the commands to customise the display:
