@@ -1,6 +1,6 @@
 # Vim Basics
 
-> Just the basics to get you up and running with Vim
+> Just the basics to get you up and running with [Vim](https://www.vim.org)
 
 - [Quick start](#quick-start)
 - [Commands](#commands)
